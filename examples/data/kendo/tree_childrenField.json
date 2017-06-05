@@ -1,0 +1,33 @@
+[
+	{
+		"text": "All",
+		"id": "1",
+	  	"spriteCssClass": "folder",
+		"type": "group",
+		"path": "reportTemplateList",
+		"nodes": [
+			{ "text": "서버 인벤토리", 		"id": "1", 	"spriteCssClass": "report",	"type": "template", "path": "reportList" },
+			{ "text": "서버별 작업 결과",	"id": "2", 	"spriteCssClass": "report",	"type": "template", "path": "reportList" }
+		]
+	},
+	{
+		"text": "서버",
+		"id": "2",
+	  	"spriteCssClass": "folder",
+		"type": "group",
+		"path": "reportTemplateList",
+		"nodes": [
+			{ "text": "서버 인벤토리", 	"id": "3", 	"spriteCssClass": "report",	"type": "template", "path": "reportList" }
+		]
+	},
+	{
+		"text": "작업",
+		"id": "3",
+	  	"spriteCssClass": "folder",
+		"type": "group",
+		"path": "reportTemplateList",
+		"nodes": [
+			{ "text": "서버별 작업 결과",	"id": "4", 	"spriteCssClass": "report",	"type": "template", "path": "reportList" }
+		]
+	}
+]

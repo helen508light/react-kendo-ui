@@ -1,0 +1,10 @@
+{
+    "source": "./src",
+    "destination": "./esdoc",
+    "excludes": ["\\bootstrap"],
+    "manual": {
+        "index": "./guide/index.md",
+        "configuration": ["./guide/cdn-guide.md"],
+        "tutorial": ["./guide/javascript-style-guide.md", "./guide/react-style-guide.md", "./guide/standard-term-guide.md"]
+    }
+}
