@@ -1,12 +1,12 @@
-## React Puf
+## React Kendo
 
 ### Getting Started
 
 Just clone the repo and start hacking:
 
 ```shell
-$ git clone ssh://dca@cims.nkia.net:29418/react-puf.git
-$ cd react-pum
+$ git clone https://github.com/nkiateam/react-kendo.git
+$ cd react-kendo
 $ npm install                   # Install Node.js components listed in ./package.json
 $ npm start                     # Compile and launch
 ```
