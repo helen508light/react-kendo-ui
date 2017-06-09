@@ -1,6 +1,6 @@
 {
-  "name": "react-puf",
-  "version": "1.0.0",
+  "name": "react-kendo-ui",
+  "version": "0.0.1",
   "description": "",
   "main": "react-puf.js",
   "scripts": {
@@ -15,8 +15,18 @@
     "build-start": "concurrent \"npm run build\" \"npm run http-server\" ",
     "start": "concurrent \"npm run http-server\" "
   },
-  "author": "Ahn Hyung-Ro",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkiateam/react-kendo-ui.git"
+  },
+  "keywords": [
+    "react",
+    "kendo",
+    "react-kendo",
+    "react-kendo-ui"
+  ],
+  "author": "NKIATEAM",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",

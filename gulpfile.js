@@ -12,8 +12,7 @@ var runSequence = require('run-sequence');
 
 var webpack = require('webpack');
 var webpackConfig = require('./webpack.config.js');
-var webpackConfig_bootstrap = require('./webpack.bootstrap.config.js');
-var webpackConfig_demo = require('./demo/webpack.config.js');
+var webpackConfig_examples = require('./examples/webpack.config.js');
 
 var paths = {
     build: 'build',
@@ -41,15 +40,15 @@ gulp.task('build.js', ['clean.js'], function (callback) {
 	});
 });
 
-// demo build
-gulp.task('clean.demo', function() {
-    return del('demo/build/*.bundle.js');
+// examples build
+gulp.task('clean.examples', function() {
+    return del('examples/build/*.bundle.js');
 });
 
-gulp.task('build.demo', ['clean.demo'], function(callback) {
-    webpack(webpackConfig_demo, function(err, stats) {
-		if(err) throw new gutil.PluginError('build.demo', err);
-		gutil.log('[build.demo]', stats.toString({
+gulp.task('build.examples', ['clean.examples'], function(callback) {
+    webpack(webpackConfig_examples, function(err, stats) {
+		if(err) throw new gutil.PluginError('build.examples', err);
+		gutil.log('[build.examples]', stats.toString({
 			colors: true
 		}));
 		callback();
@@ -110,9 +109,9 @@ gulp.task('watch', ['build.js'], function() {
     gulp.watch('src/**/*.js', ['build.js']);
 });
 
-gulp.task('watch.demo', ['build.demo'], function() {
-    gulp.watch(['demo/**/*.js', '!demo/build/*.js'], ['build.demo']);
+gulp.task('watch.examples', ['build.examples'], function() {
+    gulp.watch(['examples/**/*.js', '!examples/build/*.js'], ['build.examples']);
 });
 
 // default
-gulp.task('default', ['build.js', 'build.demo', 'build.locale', 'build.docs']);
+gulp.task('default', ['build.js', 'build.examples', 'build.locale', 'build.docs']);

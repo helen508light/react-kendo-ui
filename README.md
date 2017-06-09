@@ -8,13 +8,14 @@ Just clone the repo and start hacking:
 $ git clone https://github.com/nkiateam/react-kendo-ui.git
 $ cd react-kendo-ui
 $ npm install                   # Install Node.js components listed in ./package.json
+$ npm run build                 # build
 $ npm start                     # Compile and launch
 ```
 
 ### How to Build
 
 ```shell
-$ npm run webpack                 # or, `npm run webpack -- release`
+$ npm run build                 # or, `npm run webpack -- release`
 ```
 
 By default, it builds in a *debug* mode. If you need to build in a release

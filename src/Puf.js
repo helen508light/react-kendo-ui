@@ -16,9 +16,6 @@ import * as Semantic from './components/nkia/semantic';
 //  Kendo UI Components
 import * as Kendo from './components/kendo';
 
-// Highcharts
-import * as Highcharts from './charts/highcharts';
-
 // Utils
 import * as Utils from './utils';
 
@@ -53,14 +50,6 @@ var Puf = {
     Window: Kendo.Window,
     Slider: Kendo.Slider,
     Notification: Kendo.Notification,
-
-    // Highcharts
-    LineChart: Highcharts.LineChart,
-    ScatterChart: Highcharts.ScatterChart,
-    ColumnChart: Highcharts.ColumnChart,
-    PieChart: Highcharts.PieChart,
-    AreaChart: Highcharts.AreaChart,
-    DefaultChartOption: Highcharts.DefaultChartOption,
 
     // Utils
     Util: Utils.Util,
