@@ -19,9 +19,9 @@ var paths = {
     locale: 'build/i18n'
 };
 
-// react-puf build
+// react-kendo-ui build
 gulp.task('clean.js', function() {
-    return del([paths.build + '/react-puf.js', paths.build + '/react-puf.min.js', paths.build + '/react-puf.js.map']);
+    return del([paths.build + '/react-kendo-ui.js', paths.build + '/react-kendo-ui.min.js', paths.build + '/react-kendo-ui.js.map']);
 });
 
 gulp.task('build.js', ['clean.js'], function (callback) {
@@ -33,7 +33,7 @@ gulp.task('build.js', ['clean.js'], function (callback) {
 		callback();
 
         var rename = require('gulp-rename');
-        return gulp.src(paths.build + '/react-puf.js')
+        return gulp.src(paths.build + '/react-kendo-ui.js')
                 .pipe(uglify())
                 .pipe(rename({extname: '.min.js'}))
                 .pipe(gulp.dest(paths.build));
@@ -69,7 +69,7 @@ gulp.task('build.locale', ['clean.locale'], function() {
             .pipe(gulp.dest(paths.locale));
 });
 
-// react-puf(bootstrap) build
+// react-kendo-ui(bootstrap) build
 gulp.task('clean.bootstrap', function() {
     return del([paths.build + '/react-bootstrap-puf.js', paths.build + '/react-bootstrap-puf.min.js', paths.build + '/react-bootstrap-puf.js.map']);
 });

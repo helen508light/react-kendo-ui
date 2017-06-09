@@ -2,11 +2,11 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-	entry: './react-puf.js',
+	entry: './src/index.js',
 	output: {
-		filename: 'react-puf.js',
+		filename: 'react-kendo-ui.js',
 		path: path.resolve(__dirname, 'build'),
-		library: 'Puf',
+		library: 'K',
 		libraryTarget: 'umd'
 	},
 	devtool: 'source-map',

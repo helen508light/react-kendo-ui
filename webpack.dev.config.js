@@ -3,14 +3,14 @@ const path = require('path');
 
 module.exports = {
 	entry: {
-		'react-puf': './react-puf.js',
-        'app.bundle': './demo/src/index.js'
+		'react-kendo-ui': './src/index.js',
+        'app.bundle': './examples/src/index.js'
 	},
 	output: {
         filename: '[name].js',
-		path: path.resolve(__dirname, 'demo', 'build'),
-        publicPath: '/demo/build',
-		library: 'Puf',
+		path: path.resolve(__dirname, 'examples', 'build'),
+        publicPath: '/examples/build',
+		library: 'K',
 		libraryTarget: 'umd'
 	},
 	module: {
