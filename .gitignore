@@ -6,9 +6,9 @@
 .vscode
 .jshintrc
 npm-debug.log
-node_modules
-META-INF
-WEB-INF
-build
-esdoc/
-/demo/scripts/
+/node_modules/
+/META-INF/
+/WEB-INF/
+/build/
+/esdoc/
+/examples/build/

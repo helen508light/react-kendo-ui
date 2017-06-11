@@ -22,8 +22,8 @@ class Header extends Component {
             <div>
                 <div className="navbar">
                     <div className="navbar-header">
-                        <div className="navbar-brand">Logo</div>
-                        <div className="navbar-title">React UI 개발 가이드</div>
+                        {/*<div className="navbar-brand">Logo</div>*/}
+                        <div className="navbar-title">React Kendo UI Examples</div>
                     </div>
                 </div>
                 {/*<div className="navbar">

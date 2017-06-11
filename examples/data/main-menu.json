@@ -1,68 +1,23 @@
 [
-	{
-		"text": "Icons",
-        "items": [
-            { "text": "Font Awesome", 		"route": "fontAwesome" },
-            { "text": "Polestar Icon Font", "route": "psIconFont" }
-        ]
-    },
     {
         "text": "Components",
         "expanded": true,
         "items": [
-			{ "text": "NKIA",
-				"items": [
-					{ "text": "HiddenContent", 		"path": "/hiddenContent" }
-				]
-			},
-			{ "text": "Semantic",
-				"items": [
-					{ "text": "Button", 			"path": "/button"  },
-					{ "text": "ButtonDropdown", 	"path": "/buttonDropdown" },
-					{ "text": "ToggleButton", 		"path": "/toggleButton"  },
-					{ "text": "Modal", 				"path": "/modal" },
-					{ "text": "Panel", 				"path": "/panel" },
-					{ "text": "TextInput", 			"route": "textinput" },
-					{ "text": "TextArea", 			"route": "textarea" },
-					{ "text": "Checkbox", 			"path": "/checkbox" },
-					{ "text": "Radio", 				"path": "/radio" },
-					{ "text": "Fieldset", 			"path": "/fieldset" },
-					{ "text": "Validation", 		"path": "/validation" },
-					{ "text": "FineUploder", 		"path": "/fineUploder" }
-				]
-			},
-			{ "text": "Kendo", 		"expanded": true,
-				"items": [
-					{ "text": "Grid", 			"path": "/grid" },
-					{ "text": "TreeView", 		"path": "/treeView" },
-					{ "text": "Alert", 			"path": "/alert" },
-					{ "text": "Confirm", 		"path": "/confirm" },
-					{ "text": "Notification", 	"path": "/notification" },
-					{ "text": "TabStrip", 		"path": "/tabStrip" },
-					{ "text": "DropDownList", 	"path": "/dropDownList" },
-					{ "text": "DatePicker", 	"path": "/datePicker" },
-					{ "text": "PanelBar", 		"path": "/panelBar" },
-					{ "text": "MultiSelect", 	"path": "/multiSelect" },
-					{ "text": "NumericTextBox", "path": "/numericTextBox" },
-					{ "text": "ProgressBar", 	"path": "/progressBar" },
-					{ "text": "Window", 		"path": "/window" },
-					{ "text": "AutoComplete", 	"path": "/autoComplete" },
-					{ "text": "Slider", 		"path": "/slider" }
-				]
-			}
+			{ "text": "Grid", 			"path": "/grid" },
+			{ "text": "TreeView", 		"path": "/treeView" },
+			{ "text": "Alert", 			"path": "/alert" },
+			{ "text": "Confirm", 		"path": "/confirm" },
+			{ "text": "Notification", 	"path": "/notification" },
+			{ "text": "TabStrip", 		"path": "/tabStrip" },
+			{ "text": "DropDownList", 	"path": "/dropDownList" },
+			{ "text": "DatePicker", 	"path": "/datePicker" },
+			{ "text": "PanelBar", 		"path": "/panelBar" },
+			{ "text": "MultiSelect", 	"path": "/multiSelect" },
+			{ "text": "NumericTextBox", "path": "/numericTextBox" },
+			{ "text": "ProgressBar", 	"path": "/progressBar" },
+			{ "text": "Window", 		"path": "/window" },
+			{ "text": "AutoComplete", 	"path": "/autoComplete" },
+			{ "text": "Slider", 		"path": "/slider" }
         ]
-    },
-    { "text": "Charts",
-		"items": [
-			{ "text": "Highcharts",
-				"items": [
-					{ "text": "Line Chart", 	"path": "/lineChart"  },
-					{ "text": "Scatter Chart", 	"path": "/scatterChart"  },
-					{ "text": "Column Chart", 	"path": "/columnChart" },
-					{ "text": "Pie Chart", 		"path": "/pieChart" }
-				]
-			} 		
-		]
-	},
-	{ "text": "Diagrams" }
+    }
 ]

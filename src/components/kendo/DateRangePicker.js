@@ -234,9 +234,9 @@ class DateRangePicker extends Component {
 
         return (
             <div className="datepicker-group">
-                <Puf.DatePicker className={className} name={startName} value={startDate} initCallback={this._onStartInit} onChange={this.onStartChange}
+                <K.DatePicker className={className} name={startName} value={startDate} initCallback={this._onStartInit} onChange={this.onStartChange}
                                 timePicker={timePicker} disabled={disabled} readOnly={readOnly} />{'\u00A0'}
-                <Puf.DatePicker className={className} name={endName} value={endDate} initCallback={this._onEndInit} onChange={this.onEndChange}
+                <K.DatePicker className={className} name={endName} value={endDate} initCallback={this._onEndInit} onChange={this.onEndChange}
                                 timePicker={timePicker} disabled={disabled} readOnly={readOnly} />
             </div>
         );

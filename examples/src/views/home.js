@@ -1,9 +1,7 @@
-'use strict';
+import React, { Component, PropTypes } from 'react';
 
-var React = require('react');
-
-var Home = React.createClass({
-    render: function() {
+class Home extends Component {
+    render() {
         return (
             <div className="page-content">
                 <div className="page-header">
@@ -21,6 +19,6 @@ var Home = React.createClass({
             </div>
         );
     }
-});
+}
 
-module.exports = Home;
+export default Home;

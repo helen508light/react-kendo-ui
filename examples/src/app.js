@@ -35,7 +35,7 @@ class App extends Component {
                         <Menu />
 					</div>
 
-                    <Puf.MainFrameSplitter />
+                    {/*<K.MainFrameSplitter />*/}
 
 					<div className="center-frame">
                         <div className="path-breadcrumb"></div>
