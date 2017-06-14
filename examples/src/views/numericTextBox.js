@@ -1,15 +1,46 @@
-'use strict';
+import React, { Component, PropTypes } from 'react';
+import jsxToString from 'jsx-to-string';
 
-var React = require('react');
+class NumericTextBox extends Component {
+    constructor(props) {
+        super(props);
 
-var NumericTextBoxDemo = require('./numericTextBox/demo');
+        // 이벤트 바인드
+        this.onChange = this.onChange.bind(this);
+    }
 
-var NumericTextBox = React.createClass({
-    componentDidMount: function() {
+    componentDidMount() {
         // 최초 렌더링이 일어난 다음(한번 호출)
         prettyPrint();
-    },
-    render: function() {
+    }
+
+    onChange(e, value) {
+        console.log(e, value);
+    }
+
+    render() {
+        const numericTextBox = (<K.NumericTextBox id="numericId" 
+                                                    name="numeric" 
+                                                    className="numeric-class"
+                                                    value={1}
+                                                    width={100}
+                                                    disabled={false}
+                                                    readOnly={false}
+                                                    placeholder=""
+                                                    format="n0"
+                                                    step={1}
+                                                    min={-100}
+                                                    max={100}
+                                                    decimals={null}
+                                                    downArrowText=""
+                                                    upArrowText=""
+                                                    onChange={this.onChange} />);
+        const numericTextBoxStr = jsxToString(numericTextBox, {
+            functionNameOnly: true,
+            useFunctionCode: true,
+            displayName: 'K.NumericTextBox'
+        });
+
         return (
             <div className="page-content">
                 <div className="page-header">
@@ -17,18 +48,28 @@ var NumericTextBox = React.createClass({
                 </div>
 
                 <div className="page-body">
-                    <Puf.TabStrip>
-                        <Puf.Tabs>
-                            <Puf.Tab>DEMO</Puf.Tab>
-                            <Puf.Tab>API</Puf.Tab>
-                        </Puf.Tabs>
-                        <Puf.TabContent>
-                            <NumericTextBoxDemo />
-                        </Puf.TabContent>
-                        <Puf.TabContent>
-
-                        </Puf.TabContent>
-                    </Puf.TabStrip>
+                    <div className="row">
+                        <div className="row">{/* start default */}
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <span className="title">NumericTextBox</span>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    {numericTextBox}
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <pre className="prettyprint linenums">
+                                        {numericTextBoxStr}
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>{/* end default */}
+                        <div className="vspace-12" />
+                    </div>
 
                 </div>
 
@@ -39,6 +80,6 @@ var NumericTextBox = React.createClass({
             </div>
         );
     }
-});
+}
 
-module.exports = NumericTextBox;
+export default NumericTextBox;

@@ -1,15 +1,38 @@
-'use strict';
+import React, { Component, PropTypes } from 'react';
+import jsxToString from 'jsx-to-string';
 
-var React = require('react');
+class Notification extends Component {
+    constructor(props) {
+        super(props);
 
-var NotificationDemo = require('./notification/demo');
+        // 이벤트 바인드
+        this.onShow = this.onShow.bind(this);
+        this.onHide = this.onHide.bind(this);
+    }
 
-var Notification = React.createClass({
-    componentDidMount: function() {
+    componentDidMount() {
         // 최초 렌더링이 일어난 다음(한번 호출)
         prettyPrint();
-    },
-    render: function() {
+    }
+
+    onShow(e) {
+        this.noti.show('message', 'info');
+    }
+
+    onHide(e) {
+        this.noti.hide();
+    }
+
+    render() {
+        const notification = (<K.Notification ref={(ref) => { this.noti = ref; }} 
+                                                autoHideAfter={0} 
+                                                button={true} />);
+        const notificationStr = jsxToString(notification, {
+            functionNameOnly: true,
+            useFunctionCode: true,
+            displayName: 'K.Notification'
+        });
+
         return (
             <div className="page-content">
                 <div className="page-header">
@@ -17,18 +40,30 @@ var Notification = React.createClass({
                 </div>
 
                 <div className="page-body">
-                    <Puf.TabStrip>
-                        <Puf.Tabs>
-                            <Puf.Tab>DEMO</Puf.Tab>
-                            <Puf.Tab>API</Puf.Tab>
-                        </Puf.Tabs>
-                        <Puf.TabContent>
-                            <NotificationDemo />
-                        </Puf.TabContent>
-                        <Puf.TabContent>
-
-                        </Puf.TabContent>
-                    </Puf.TabStrip>
+                    <div className="row">
+                        <div className="row">{/* start default */}
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <span className="title">Notification</span>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <button onClick={this.onShow}>Show Notification</button>
+                                    <button onClick={this.onHide}>Hide Notification</button>
+                                    {notification}
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <pre className="prettyprint linenums">
+                                        {notificationStr}
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>{/* end default */}
+                        <div className="vspace-12" />
+                    </div>
                 </div>
 
                 <div className="page-footer">
@@ -38,6 +73,6 @@ var Notification = React.createClass({
             </div>
         );
     }
-});
+}
 
-module.exports = Notification;
+export default Notification;

@@ -1,15 +1,29 @@
-'use strict';
+import React, { Component, PropTypes } from 'react';
+import jsxToString from 'jsx-to-string';
 
-var React = require('react');
+class Window extends Component {
+    constructor(props) {
+        super(props);
 
-import WindowDemo from './window/demo';
+        // 이벤트 바인드
+        // this.onOpen = this.onOpen.bind(this);
+    }
 
-var Window = React.createClass({
-    componentDidMount: function() {
+    componentDidMount() {
         // 최초 렌더링이 일어난 다음(한번 호출)
         prettyPrint();
-    },
-    render: function() {
+    }
+
+    render() {
+        const window = (<K.Window>
+                            <div>하하</div>
+                        </K.Window>);
+        const windowStr = jsxToString(window, {
+            functionNameOnly: true,
+            useFunctionCode: true,
+            displayName: 'K.Window'
+        });
+
         return (
             <div className="page-content">
                 <div className="page-header">
@@ -17,18 +31,29 @@ var Window = React.createClass({
                 </div>
 
                 <div className="page-body">
-                    <Puf.TabStrip>
-                        <Puf.Tabs>
-                            <Puf.Tab>DEMO</Puf.Tab>
-                            <Puf.Tab>API</Puf.Tab>
-                        </Puf.Tabs>
-                        <Puf.TabContent>
-                            <WindowDemo />
-                        </Puf.TabContent>
-                        <Puf.TabContent>
+                    <div className="row">
+                        <div className="row">{/* start default */}
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <span className="title">Window</span>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    {window}
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <pre className="prettyprint linenums">
+                                        {windowStr}
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>{/* end default */}
+                        <div className="vspace-12" />
 
-                        </Puf.TabContent>
-                    </Puf.TabStrip>
+                    </div>
 
                 </div>
 
@@ -39,6 +64,6 @@ var Window = React.createClass({
             </div>
         );
     }
-});
+}
 
-module.exports = Window;
+export default Window;

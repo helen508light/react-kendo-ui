@@ -1,15 +1,37 @@
-'use strict';
+import React, { Component, PropTypes } from 'react';
+import jsxToString from 'jsx-to-string';
 
-var React = require('react');
+class ProgressBar extends Component {
+    constructor(props) {
+        super(props);
 
-import ProgressBarDemo from './progressBar/demo';
+        // 이벤트 바인드
+        this.onClick = this.onClick.bind(this);
+    }
 
-var ProgressBar = React.createClass({
-    componentDidMount: function() {
+    componentDidMount() {
         // 최초 렌더링이 일어난 다음(한번 호출)
         prettyPrint();
-    },
-    render: function() {
+    }
+
+    onClick() {
+        var value = this.progressbar.getValue();
+        if(value === 30) {
+            value = 80;
+        }else {
+            value = 30;
+        }
+        this.progressbar.setValue(value);
+    }
+
+    render() {
+        const progressBar = (<K.ProgressBar ref={(ref) => { this.progressbar = ref; }} value={30} />);
+        const progressBarStr = jsxToString(progressBar, {
+            functionNameOnly: true,
+            useFunctionCode: true,
+            displayName: 'K.ProgressBar'
+        });
+
         return (
             <div className="page-content">
                 <div className="page-header">
@@ -17,18 +39,53 @@ var ProgressBar = React.createClass({
                 </div>
 
                 <div className="page-body">
-                    <Puf.TabStrip>
-                        <Puf.Tabs>
-                            <Puf.Tab>DEMO</Puf.Tab>
-                            <Puf.Tab>API</Puf.Tab>
-                        </Puf.Tabs>
-                        <Puf.TabContent>
-                            <ProgressBarDemo />
-                        </Puf.TabContent>
-                        <Puf.TabContent>
+                    <div className="row">
+                        <div className="row">{/* start default */}
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <span className="title">ProgressBar</span>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    {progressBar}
+                                    {'\u00A0'}
+                                    <button onClick={this.onClick}>change</button>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <pre className="prettyprint linenums">
+                                        {progressBarStr}
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>{/* end default */}
+                        <div className="vspace-12" />
 
-                        </Puf.TabContent>
-                    </Puf.TabStrip>
+                        <div className="row">{/* start url */}
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <span className="title">ProgressBar(chunk)</span>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <pre className="prettyprint linenums">
+                                        {/*'// html\n'*/}
+                                        {'<K.TabStrip>'}
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>{/* end url */}
+                        <div className="vspace-12" />
+
+                    </div>
 
                 </div>
 
@@ -39,6 +96,6 @@ var ProgressBar = React.createClass({
             </div>
         );
     }
-});
+}
 
-module.exports = ProgressBar;
+export default ProgressBar;

@@ -6,13 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
-    "build-js": "gulp build.js",
-    "build-examples": "gulp build.examples",
-    "http-server": "http-server ./ -p 8888 -o /index.html",
     "dev": "webpack-dev-server --config webpack.dev.config.js",
     "docs": "esdoc",
-    "build-start": "concurrent \"npm run build\" \"npm run http-server\" ",
-    "start": "concurrent \"npm run http-server\" "
+    "start": "http-server ./ -p 8888 -o /index.html"
   },
   "repository": {
     "type": "git",

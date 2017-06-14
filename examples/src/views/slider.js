@@ -1,15 +1,27 @@
-'use strict';
+import React, { Component, PropTypes } from 'react';
+import jsxToString from 'jsx-to-string';
 
-var React = require('react');
+class Slider extends Component {
+    constructor(props) {
+        super(props);
 
-import SliderDemo from './slider/demo';
+        // 이벤트 바인드
+        // this.onOpen = this.onOpen.bind(this);
+    }
 
-var Slider = React.createClass({
-    componentDidMount: function() {
+    componentDidMount() {
         // 최초 렌더링이 일어난 다음(한번 호출)
         prettyPrint();
-    },
-    render: function() {
+    }
+
+    render() {
+        const slider = (<K.Slider value={3} />);
+        const sliderStr = jsxToString(slider, {
+            functionNameOnly: true,
+            useFunctionCode: true,
+            displayName: 'K.Slider'
+        });
+
         return (
             <div className="page-content">
                 <div className="page-header">
@@ -17,18 +29,28 @@ var Slider = React.createClass({
                 </div>
 
                 <div className="page-body">
-                    <Puf.TabStrip>
-                        <Puf.Tabs>
-                            <Puf.Tab>DEMO</Puf.Tab>
-                            <Puf.Tab>API</Puf.Tab>
-                        </Puf.Tabs>
-                        <Puf.TabContent>
-                            <SliderDemo />
-                        </Puf.TabContent>
-                        <Puf.TabContent>
-
-                        </Puf.TabContent>
-                    </Puf.TabStrip>
+                    <div className="row">
+                        <div className="row">{/* start default */}
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <span className="title">Slider</span>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    {slider}
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <pre className="prettyprint linenums">
+                                        {sliderStr}
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>{/* end default */}
+                        <div className="vspace-12" />
+                    </div>
                 </div>
 
                 <div className="page-footer">
@@ -38,6 +60,6 @@ var Slider = React.createClass({
             </div>
         );
     }
-});
+}
 
-module.exports = Slider;
+export default Slider;
