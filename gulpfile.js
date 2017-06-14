@@ -15,8 +15,8 @@ var webpackConfig = require('./webpack.config.js');
 var webpackConfig_examples = require('./examples/webpack.config.js');
 
 var paths = {
-    build: 'build',
-    locale: 'build/i18n'
+    build: 'dist',
+    locale: 'dist/i18n'
 };
 
 // react-kendo-ui build
@@ -67,27 +67,6 @@ gulp.task('build.locale', ['clean.locale'], function() {
             .pipe(uglify())
             .pipe(rename({extname: '.min.js'}))
             .pipe(gulp.dest(paths.locale));
-});
-
-// react-kendo-ui(bootstrap) build
-gulp.task('clean.bootstrap', function() {
-    return del([paths.build + '/react-bootstrap-puf.js', paths.build + '/react-bootstrap-puf.min.js', paths.build + '/react-bootstrap-puf.js.map']);
-});
-
-gulp.task('build.bootstrap', ['clean.bootstrap'], function (callback) {
-    webpack(webpackConfig_bootstrap, function(err, stats) {
-		if(err) throw new gutil.PluginError('build.bootstrap', err);
-		gutil.log('[build.bootstrap]', stats.toString({
-			colors: true
-		}));
-		callback();
-
-        var rename = require('gulp-rename');
-        return gulp.src(paths.build + '/react-bootstrap-puf.js')
-                .pipe(uglify())
-                .pipe(rename({extname: '.min.js'}))
-                .pipe(gulp.dest(paths.build));
-	});
 });
 
 // docs
