@@ -1,5 +1,8 @@
 ## React Kendo UI
 
+### Examples
+https://nkiateam.github.io/react-kendo-ui/examples/
+
 ### Getting Started
 
 Just clone the repo and start hacking:
