@@ -24234,6 +24234,15 @@ var Header = function (_Component) {
                             "React Kendo UI Examples"
                         )
                     )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "navbar-right" },
+                    _react2.default.createElement(
+                        "a",
+                        { href: "https://github.com/nkiateam/react-kendo-ui" },
+                        "GitHub"
+                    )
                 )
             );
         }

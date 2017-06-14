@@ -26,6 +26,9 @@ class Header extends Component {
                         <div className="navbar-title">React Kendo UI Examples</div>
                     </div>
                 </div>
+                <div className="navbar-right">
+                    <a href="https://github.com/nkiateam/react-kendo-ui">GitHub</a>
+                </div>
                 {/*<div className="navbar">
                     레이아웃: <Puf.DropDownList items={[]} width={100} />
                     스킨: <Puf.DropDownList url="/demo/data/skins.json" method="GET" width={100} onChange={this.onChangeSkin} />
