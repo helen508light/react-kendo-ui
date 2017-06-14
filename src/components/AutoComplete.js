@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import { Util, KendoUtil } from '../../utils';
+import { Util, KendoUtil } from '../utils';
 
 
 /**

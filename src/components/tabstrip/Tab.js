@@ -12,7 +12,7 @@
 'use strict';
 
 import React, { Component, PropTypes } from 'react';
-import { Util } from '../../../utils';
+import { Util } from '../../utils';
 
 const propTypes = {
     id: PropTypes.string

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import { Util } from '../../utils';
+import { Util } from '../utils';
 
 /**
  * @typedef {Object} Slider-Property
