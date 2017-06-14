@@ -1,6 +1,6 @@
 {
   "name": "react-kendo-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -53,13 +53,13 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.3.3",
-    "webpack-dev-server": "^2.4.2"
-  },
-  "dependencies": {
-    "classnames": "^2.2.3",
+    "webpack-dev-server": "^2.4.2",
     "react": "^15.4.0",
     "react-addons-update": "^15.4.0",
     "react-dom": "^15.4.0",
     "react-router": "^2.8.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.3"
   }
 }
