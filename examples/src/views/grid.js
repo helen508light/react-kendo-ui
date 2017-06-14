@@ -108,7 +108,7 @@ class Grid extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <K.Grid ref="grid" url="/examples/data/kendo/grid_page.json" method="GET" height="250"
+                                    <K.Grid ref="grid" url="./data/kendo/grid_page.json" method="GET" height="250"
                                             listField="resultValue.list" totalField="resultValue.totalCount"
                                             columns={columns} pageable={false} filterable={true} sort={{ field: 'name', dir: 'desc' }} editable={true} />
                                 </div>
@@ -118,7 +118,7 @@ class Grid extends Component {
                                 <div className="col-md-12">
                                     <pre className="prettyprint linenums">
                                         {/*'// html\n'*/}
-                                        {'<K.Grid url="/examples/data/kendo/grid_page.json" method="GET" height="250"\n'}
+                                        {'<K.Grid url="./data/kendo/grid_page.json" method="GET" height="250"\n'}
                                         {'          listField="resultValue.list" totalField="resultValue.totalCount"\n'}
                                         {'          columns={columns} pageable={false} filterable={true} />'}
                                     </pre>
@@ -132,7 +132,7 @@ class Grid extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <K.Grid url="/examples/data/kendo/grid_page.json" method="GET" height="250"
+                                    <K.Grid url="./data/kendo/grid_page.json" method="GET" height="250"
                                             listField="resultValue.list" totalField="resultValue.totalCount"
                                             columns={columns} pageable={true} filterable={false} selectMode="row" onChange={this.onChange} />
                                 </div>
@@ -142,7 +142,7 @@ class Grid extends Component {
                                 <div className="col-md-12">
                                     <pre className="prettyprint linenums">
                                         {/*'// html\n'*/}
-                                        {'<K.Grid url="/examples/data/kendo/grid_page.json" method="GET" height="250"\n'}
+                                        {'<K.Grid url="./data/kendo/grid_page.json" method="GET" height="250"\n'}
                                         {'          listField="resultValue.list" totalField="resultValue.totalCount"\n'}
                                         {'          columns={columns} pageable={true} filterable={false} selectMode="row" onChange={this.onChange} />'}
                                     </pre>
@@ -156,7 +156,7 @@ class Grid extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <K.Grid url="/examples/data/kendo/grid_page.json" method="GET" height="250"
+                                    <K.Grid url="./data/kendo/grid_page.json" method="GET" height="250"
                                             listField="resultValue.list" totalField="resultValue.totalCount"
                                             columns={columns} pageable={true} filterable={false} selectMode="row" multiple={true} onChange={this.onChange} />
                                 </div>
@@ -166,7 +166,7 @@ class Grid extends Component {
                                 <div className="col-md-12">
                                     <pre className="prettyprint linenums">
                                         {/*'// html\n'*/}
-                                        {'<K.Grid url="/examples/data/kendo/grid_page.json" method="GET" height="250"\n'}
+                                        {'<K.Grid url="./data/kendo/grid_page.json" method="GET" height="250"\n'}
                                         {'          listField="resultValue.list" totalField="resultValue.totalCount"\n'}
                                         {'          columns={columns} pageable={true} filterable={false} selectMode="row" multiple={true} onChange={this.onChange} />'}
                                     </pre>
@@ -180,7 +180,7 @@ class Grid extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <K.Grid url="/examples/data/kendo/grid_page.json" method="GET" height="250"
+                                    <K.Grid url="./data/kendo/grid_page.json" method="GET" height="250"
                                             listField="resultValue.list" totalField="resultValue.totalCount"
                                             columns={columns} pageable={true} filterable={false} selectMode="cell" onChange={this.onChange} />
                                 </div>

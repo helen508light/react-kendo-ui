@@ -36,14 +36,14 @@ class TreeView extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <K.TreeView url="/examples/data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} />
+                                    <K.TreeView url="./data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} />
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
                                     <pre className="prettyprint linenums">
                                         {/*'// html\n'*/}
-                                        {'<K.TreeView url="/examples/data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} />'}
+                                        {'<K.TreeView url="./data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} />'}
                                     </pre>
                                 </div>
                             </div>
@@ -58,14 +58,14 @@ class TreeView extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <K.TreeView url="/examples/data/kendo/tree_childrenField.json" method="GET" childrenField="nodes" />
+                                    <K.TreeView url="./data/kendo/tree_childrenField.json" method="GET" childrenField="nodes" />
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
                                     <pre className="prettyprint linenums">
                                         {/*'// html\n'*/}
-                                        {'<K.TreeView url="/examples/data/kendo/tree_childrenField.json" method="GET" childrenField="nodes" />'}
+                                        {'<K.TreeView url="./data/kendo/tree_childrenField.json" method="GET" childrenField="nodes" />'}
                                     </pre>
                                 </div>
                             </div>
@@ -80,14 +80,14 @@ class TreeView extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <K.TreeView url="/examples/data/kendo/tree_onDemand.json" method="GET" onSelect={this.onSelectNode} onDemand={true} />
+                                    <K.TreeView url="./data/kendo/tree_onDemand.json" method="GET" onSelect={this.onSelectNode} onDemand={true} />
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
                                     <pre className="prettyprint linenums">
                                         {/*'// html\n'*/}
-                                        {'<K.TreeView url="/examples/data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} onDemand={true} />'}
+                                        {'<K.TreeView url="./data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} onDemand={true} />'}
                                     </pre>
                                 </div>
                             </div>

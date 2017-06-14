@@ -25413,7 +25413,7 @@ var Grid = function (_Component) {
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'col-md-12' },
-                                    _react2.default.createElement(K.Grid, { ref: 'grid', url: '/examples/data/kendo/grid_page.json', method: 'GET', height: '250',
+                                    _react2.default.createElement(K.Grid, { ref: 'grid', url: './data/kendo/grid_page.json', method: 'GET', height: '250',
                                         listField: 'resultValue.list', totalField: 'resultValue.totalCount',
                                         columns: columns, pageable: false, filterable: true, sort: { field: 'name', dir: 'desc' }, editable: true })
                                 )
@@ -25427,7 +25427,7 @@ var Grid = function (_Component) {
                                     _react2.default.createElement(
                                         'pre',
                                         { className: 'prettyprint linenums' },
-                                        '<K.Grid url="/examples/data/kendo/grid_page.json" method="GET" height="250"\n',
+                                        '<K.Grid url="./data/kendo/grid_page.json" method="GET" height="250"\n',
                                         '          listField="resultValue.list" totalField="resultValue.totalCount"\n',
                                         '          columns={columns} pageable={false} filterable={true} />'
                                     )
@@ -25452,7 +25452,7 @@ var Grid = function (_Component) {
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'col-md-12' },
-                                    _react2.default.createElement(K.Grid, { url: '/examples/data/kendo/grid_page.json', method: 'GET', height: '250',
+                                    _react2.default.createElement(K.Grid, { url: './data/kendo/grid_page.json', method: 'GET', height: '250',
                                         listField: 'resultValue.list', totalField: 'resultValue.totalCount',
                                         columns: columns, pageable: true, filterable: false, selectMode: 'row', onChange: this.onChange })
                                 )
@@ -25466,7 +25466,7 @@ var Grid = function (_Component) {
                                     _react2.default.createElement(
                                         'pre',
                                         { className: 'prettyprint linenums' },
-                                        '<K.Grid url="/examples/data/kendo/grid_page.json" method="GET" height="250"\n',
+                                        '<K.Grid url="./data/kendo/grid_page.json" method="GET" height="250"\n',
                                         '          listField="resultValue.list" totalField="resultValue.totalCount"\n',
                                         '          columns={columns} pageable={true} filterable={false} selectMode="row" onChange={this.onChange} />'
                                     )
@@ -25491,7 +25491,7 @@ var Grid = function (_Component) {
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'col-md-12' },
-                                    _react2.default.createElement(K.Grid, { url: '/examples/data/kendo/grid_page.json', method: 'GET', height: '250',
+                                    _react2.default.createElement(K.Grid, { url: './data/kendo/grid_page.json', method: 'GET', height: '250',
                                         listField: 'resultValue.list', totalField: 'resultValue.totalCount',
                                         columns: columns, pageable: true, filterable: false, selectMode: 'row', multiple: true, onChange: this.onChange })
                                 )
@@ -25505,7 +25505,7 @@ var Grid = function (_Component) {
                                     _react2.default.createElement(
                                         'pre',
                                         { className: 'prettyprint linenums' },
-                                        '<K.Grid url="/examples/data/kendo/grid_page.json" method="GET" height="250"\n',
+                                        '<K.Grid url="./data/kendo/grid_page.json" method="GET" height="250"\n',
                                         '          listField="resultValue.list" totalField="resultValue.totalCount"\n',
                                         '          columns={columns} pageable={true} filterable={false} selectMode="row" multiple={true} onChange={this.onChange} />'
                                     )
@@ -25530,7 +25530,7 @@ var Grid = function (_Component) {
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'col-md-12' },
-                                    _react2.default.createElement(K.Grid, { url: '/examples/data/kendo/grid_page.json', method: 'GET', height: '250',
+                                    _react2.default.createElement(K.Grid, { url: './data/kendo/grid_page.json', method: 'GET', height: '250',
                                         listField: 'resultValue.list', totalField: 'resultValue.totalCount',
                                         columns: columns, pageable: true, filterable: false, selectMode: 'cell', onChange: this.onChange })
                                 )
@@ -27114,7 +27114,7 @@ var TreeView = function (_Component) {
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'col-md-12' },
-                                    _react2.default.createElement(K.TreeView, { url: '/examples/data/kendo/tree.json', method: 'GET', onSelect: this.onSelectNode })
+                                    _react2.default.createElement(K.TreeView, { url: './data/kendo/tree.json', method: 'GET', onSelect: this.onSelectNode })
                                 )
                             ),
                             _react2.default.createElement(
@@ -27126,7 +27126,7 @@ var TreeView = function (_Component) {
                                     _react2.default.createElement(
                                         'pre',
                                         { className: 'prettyprint linenums' },
-                                        '<K.TreeView url="/examples/data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} />'
+                                        '<K.TreeView url="./data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} />'
                                     )
                                 )
                             )
@@ -27154,7 +27154,7 @@ var TreeView = function (_Component) {
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'col-md-12' },
-                                    _react2.default.createElement(K.TreeView, { url: '/examples/data/kendo/tree_childrenField.json', method: 'GET', childrenField: 'nodes' })
+                                    _react2.default.createElement(K.TreeView, { url: './data/kendo/tree_childrenField.json', method: 'GET', childrenField: 'nodes' })
                                 )
                             ),
                             _react2.default.createElement(
@@ -27166,7 +27166,7 @@ var TreeView = function (_Component) {
                                     _react2.default.createElement(
                                         'pre',
                                         { className: 'prettyprint linenums' },
-                                        '<K.TreeView url="/examples/data/kendo/tree_childrenField.json" method="GET" childrenField="nodes" />'
+                                        '<K.TreeView url="./data/kendo/tree_childrenField.json" method="GET" childrenField="nodes" />'
                                     )
                                 )
                             )
@@ -27194,7 +27194,7 @@ var TreeView = function (_Component) {
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'col-md-12' },
-                                    _react2.default.createElement(K.TreeView, { url: '/examples/data/kendo/tree_onDemand.json', method: 'GET', onSelect: this.onSelectNode, onDemand: true })
+                                    _react2.default.createElement(K.TreeView, { url: './data/kendo/tree_onDemand.json', method: 'GET', onSelect: this.onSelectNode, onDemand: true })
                                 )
                             ),
                             _react2.default.createElement(
@@ -27206,7 +27206,7 @@ var TreeView = function (_Component) {
                                     _react2.default.createElement(
                                         'pre',
                                         { className: 'prettyprint linenums' },
-                                        '<K.TreeView url="/examples/data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} onDemand={true} />'
+                                        '<K.TreeView url="./data/kendo/tree.json" method="GET" onSelect={this.onSelectNode} onDemand={true} />'
                                     )
                                 )
                             )
