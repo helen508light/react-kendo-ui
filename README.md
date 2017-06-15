@@ -18,21 +18,36 @@ $ npm start                     # Compile and launch
 ### How to Build
 
 ```shell
-$ npm run build                 # or, `npm run webpack -- release`
+$ npm run build                 # or, `gulp`
 ```
 
-By default, it builds in a *debug* mode. If you need to build in a release
-mode, just add `-- release` flag. This will optimize the output bundle for
-production deployment.
-
 ### How to Run
+
+This will start a lightweight development server.
 
 ```shell
 $ npm start                     # or, `npm start -- release`
 ```
 
-This will start a lightweight development server with "live reload" and
-synchronized browsing across multiple devices and browsers.
+### Usage
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import * as K from 'react-kendo-ui';
+
+const App = () => (
+  <div>
+    <K.Grid url="./data/grid_page.json" height="250"
+            columns={columns} pageable={true} filterable={true} />
+  </div>
+);
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
+```
 
 ### Documentation
 
@@ -51,12 +66,17 @@ synchronized browsing across multiple devices and browsers.
 ```
 .
 ├── /dist/                      # The folder for compiled output
-├── /docs/                      # Documentation files for the project
-├── /libs/                      # javascript library
+├── /esdoc/                     # Documentation API for react kendo ui
+├── /guide/                     # Documentation guide for Documentation API
+├── /examples/                  # Examples for react kendo ui
 ├── /node_modules/              # 3rd-party libraries and utilities
 ├── /src/                       # The source code of the application
-│   ├── /components/            # React components
-│   └── /app.js                 # Client-side startup script
+│   ├── /components/            # React Kendo UI Components
+│   ├── /i18n/                  # language configuration
+│   ├── /utils/                 # Utility Function for React Kendo UI Components
+│   ├── /index.js               # index
+│   └── /umd.js                 # umd
+├── gulpfile.js                 # gulp config file
 ├── package.json                # The list of 3rd party libraries and utilities
 └── webpack.config.js           # webpack module builder config file
 ```
