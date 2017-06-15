@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import jsxToString from 'jsx-to-string';
+import * as K from '../../../src';
 
 var columns = [
     {

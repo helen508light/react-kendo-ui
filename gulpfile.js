@@ -20,14 +20,14 @@ var paths = {
 };
 
 // react-kendo-ui build
-gulp.task('clean.js', function() {
+gulp.task('clean.umd', function() {
     return del([paths.build + '/react-kendo-ui.js', paths.build + '/react-kendo-ui.min.js', paths.build + '/react-kendo-ui.js.map']);
 });
 
-gulp.task('build.js', ['clean.js'], function (callback) {
+gulp.task('build.umd', ['clean.umd'], function (callback) {
     webpack(webpackConfig, function(err, stats) {
-		if(err) throw new gutil.PluginError('build.js', err);
-		gutil.log('[build.js]', stats.toString({
+		if(err) throw new gutil.PluginError('build.umd', err);
+		gutil.log('[build.umd]', stats.toString({
 			colors: true
 		}));
 		callback();
@@ -84,8 +84,8 @@ gulp.task('lint', function() {
 });
 
 // watch
-gulp.task('watch', ['build.js'], function() {
-    gulp.watch('src/**/*.js', ['build.js']);
+gulp.task('watch', ['build.umd'], function() {
+    gulp.watch('src/**/*.js', ['build.umd']);
 });
 
 gulp.task('watch.examples', ['build.examples'], function() {
@@ -93,4 +93,4 @@ gulp.task('watch.examples', ['build.examples'], function() {
 });
 
 // default
-gulp.task('default', ['build.js', 'build.examples', 'build.locale', 'build.docs']);
+gulp.task('default', ['build.umd', 'build.examples', 'build.locale', 'build.docs']);

@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { browserHistory, hashHistory } from 'react-router';
+import * as K from '../../../src';
+// import { TreeView } from '../../../src';
 
 class Menu extends Component {
     constructor(props) {

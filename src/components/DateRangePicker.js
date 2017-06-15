@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import { Util, DateUtil } from '../utils';
+import DatePicker from './DatePicker';
 
 /**
  * @typedef {Object} DateRangePicker-Property
@@ -234,9 +235,9 @@ class DateRangePicker extends Component {
 
         return (
             <div className="datepicker-group">
-                <K.DatePicker className={className} name={startName} value={startDate} initCallback={this._onStartInit} onChange={this.onStartChange}
+                <DatePicker className={className} name={startName} value={startDate} initCallback={this._onStartInit} onChange={this.onStartChange}
                                 timePicker={timePicker} disabled={disabled} readOnly={readOnly} />{'\u00A0'}
-                <K.DatePicker className={className} name={endName} value={endDate} initCallback={this._onEndInit} onChange={this.onEndChange}
+                <DatePicker className={className} name={endName} value={endDate} initCallback={this._onEndInit} onChange={this.onEndChange}
                                 timePicker={timePicker} disabled={disabled} readOnly={readOnly} />
             </div>
         );

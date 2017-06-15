@@ -143,12 +143,13 @@ class PanelBarPane extends Component {
                     if(item.hasOwnProperty('data')) {
                         data = { data: JSON.stringify(item.data) };
                     }
-                    //return (<li key={Util.uniqueID()}>{icon} {text}</li>);
-                    return (<li {...data}>{icon} {text}</li>);
+                    // return (<li key={Util.uniqueID()}>{icon} {text}</li>);
+                    // return (<li {...data}>{icon} {text}</li>);
+                    return (<li key={Util.uniqueID()} {...data}>{icon} {text}</li>);
                     //return <PanelBarPaneItem data={data}>{icon} {text}</PanelBarPaneItem>;
                 }else {
-                    //return (<li key={Util.uniqueID()}>{item}</li>);
-                    return (<li>{item}</li>);
+                    return (<li key={Util.uniqueID()}>{item}</li>);
+                    // return (<li>{item}</li>);
                 }
             });
             content = <ul>{_items}</ul>;

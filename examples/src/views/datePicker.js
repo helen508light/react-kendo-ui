@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import jsxToString from 'jsx-to-string';
+import * as K from '../../../src';
 
 var _date = '2016-06-06', _datetime = new Date(), 
 disabled = false, disabledTime = false, 

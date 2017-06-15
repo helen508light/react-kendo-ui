@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/umd.js',
 	output: {
 		filename: 'react-kendo-ui.js',
 		path: path.resolve(__dirname, 'dist'),
