@@ -1,4 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import Markdown from '../common/Markdown';
+
+import Readme from '../../../README.md';
 
 class Home extends Component {
     render() {
@@ -9,7 +12,7 @@ class Home extends Component {
                 </div>
 
                 <div className="page-body">
-                    안형로
+                    <Markdown source={Readme}/>
                 </div>
 
                 <div className="page-footer">

@@ -26,7 +26,27 @@ module.exports = {
                     	cacheDirectory: true
                     }
                 }]
-            }
+            },
+			{ 
+				test: /\.md$/, 
+				use: [
+					{
+						loader: 'html-loader' 
+					},
+					{
+						loader: 'markdown-loader',
+						options: {
+                            /* your options here */
+                        }
+					}
+				]
+			},
+			{ 
+				test: /\.json$/, 
+				use: [{
+					loader: 'json-loader' 
+				}]
+			}
         ]
 	}
 }
