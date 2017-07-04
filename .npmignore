@@ -14,6 +14,7 @@ npm-debug.log
 /examples/
 /guide/
 .esdoc.json
+.eslintrc
 gulpfile.js
 index.html
 webpack.config.js
