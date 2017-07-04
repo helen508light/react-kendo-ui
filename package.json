@@ -5,9 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp",
-    "dev": "webpack-dev-server --config webpack.dev.config.js",
+    "eslint": "eslint ./src/index.js || exit 0",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --open",
     "docs": "esdoc",
+    "build": "gulp",
     "start": "http-server ./ -p 8888 -o /index.html"
   },
   "repository": {
@@ -32,6 +33,8 @@
     "concurrently": "^2.0.0",
     "del": "^2.2.0",
     "esdoc": "^0.5.2",
+    "eslint": "^4.1.1",
+    "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
@@ -60,7 +63,7 @@
     "run-sequence": "^1.1.5",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.3.3",
+    "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
